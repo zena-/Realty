@@ -1,0 +1,60 @@
+@import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
+@import url(http://fonts.googleapis.com/css?family=Clicker+Script);
+/* This is a comment! */
+/* Css syntax:
+selector (
+	property: value;
+	property: value;
+)
+
+*/
+
+/* type selector */
+p {/* select all <p> */
+	font-size: 1em;
+	line-height: 1.5em
+	}
+
+figcaption {
+	/*font-weight: normal;
+	font-size: 0.75em;
+	line-height: 1.5em;
+	font-family: Georgia, "New Times Roman", serif;*/
+	font: normal 0.75em/1.5em; 'Clicker Script', cursive;
+	color: #777; 
+	text-align: right;
+}	
+
+/* class selector (applied to as many element as you like)*/
+
+.milk-text {/* this will select elements with class 'milk-text' */
+	font: bold 2.6em 'Clicker Script', cursive;
+	color: white
+	text-shadow: 0 2px 3px #000;
+}
+
+/* id selector (only apply to one unique element per page) */
+#logo {/* this will select elements with id='logo' */
+	background: aqua
+}
+
+/* decendent selector */
+#logo h1 { /* by selecting h1, this will only style h1 in the id="logo" */
+	font-family: 'Elsie Swash Caps', cursive}
+#logo h2 {font-family: 'Clicker Script', cursive}
+
+/* psuedo selector, in this example we are using both decendent(#) and psuedo */
+#details a:link, #details a:link {
+	color: black;
+	text-decoration: none;
+}
+#details a:hover{
+	color: black
+	text-decoration: underline
+}
+#details a:active
+	color: red
+
+
+
+
