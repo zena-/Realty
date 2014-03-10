@@ -12,7 +12,7 @@ selector (
 /* type selector */
 p {/* select all <p> */
 	font-size: 1em;
-	line-height: 1.5em
+	line-height: 1.5em;
 	}
 
 figcaption {
@@ -35,7 +35,6 @@ figcaption {
 
 /* id selector (only apply to one unique element per page) */
 #logo {/* this will select elements with id='logo' */
-	background: aqua
 }
 
 /* decendent selector */
@@ -48,12 +47,104 @@ figcaption {
 	color: black;
 	text-decoration: none;
 }
-#details a:hover{
-	color: black
+#details a:hover {
+	color: black;
 	text-decoration: underline;
 }
-#details a:active
-	color: red
+#details a:active {
+	color: red;
+}
+
+/*media*/
+img, video, audio {
+	max-width: 100%;
+}
+
+/* layout */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+	background-color: silver;
+}
+
+.col-1 {
+	float: left;
+	width: 32%;
+	background: gray; 
+
+}
+
+.col-2 {
+	float: left;
+	width: 66%;
+	background: gray; 
+
+}
+
+.col-3 {
+	background: gray; 
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+}
+
+[class*="col-"] {
+	margin-left: 2%;
+}
+
+.first {
+	margin-left: 0%;
+}
+
+/* sections */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	z-index: 1;
+}
+
+sections {
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+/* social */
+#social {
+	position: fixed;
+	top: 200px;
+	right: 20px;
+	width: 40px;
+	z-index: 1;
+}
+
+#social a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: yellow;
+}
+
+
+
+
+
+
+
+
 
 
 
