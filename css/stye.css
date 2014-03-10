@@ -29,7 +29,7 @@ figcaption {
 
 .milk-text {/* this will select elements with class 'milk-text' */
 	font: bold 2.6em 'Clicker Script', cursive;
-	color: white
+	color: white;
 	text-shadow: 0 2px 3px #000;
 }
 
@@ -50,7 +50,7 @@ figcaption {
 }
 #details a:hover{
 	color: black
-	text-decoration: underline
+	text-decoration: underline;
 }
 #details a:active
 	color: red
