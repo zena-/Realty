@@ -7,8 +7,12 @@ body {
   font-size: 100%;
 }
 
-h3 {
+h3, h4 {
   margin: 0 0 10px;
+}
+
+h4 {
+  font-weight: normal;
 }
 
 ul, ol {
@@ -109,6 +113,10 @@ iframe {
   padding-right: 30px;
 }
 
+.new {
+  color: #ccc;
+  text-shadow: 0 2px 0 #000;
+}
 
 /*////////// BACKGROUNDS //////////*/
 
@@ -201,6 +209,10 @@ img, video, audio, iframe, table, form {
 
 .first {
   margin-left: 0%;
+}
+
+.right {
+  float: right;
 }
 
 /*/////// SOCIAL ////////*/
