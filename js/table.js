@@ -46,14 +46,26 @@ $(function() {
     $('table').stupidtable(); // jQuery table sort plugin
   };
 
-  // create properties
+  // get properties via API and create property instances
 
-  var property1 = new Property("2345 Fairview Ln.", "Brooklyn", "NY", 1200000, "2014 Apr 3");
-  var property2 = new Property("974 Clapton St.", "Queens", "NY", 998000, "2014 Mar 14");
-  var property3 = new Property("14A Belmont Way", "Bronx", "NY", 874000, "2014 Mar 28");
-  var property4 = new Property("455 Crazy lane", "Queens", "NY", 555000, "2013 Apr 1");
+  function refresh() {
+    $.get('http://exceptional-realty-property-ad.herokuapp.com/properties.json', function(response){
+      //console.log(response);
 
-  //console.log(Property.all);
-  Property.displayContent();
+      Property.all = []; //clear the array of property instances.
+      $('table').find('tbody').empty(); //empty table body
+
+      $.each(response, function(i, property){
+        var property = new Property(property.street, property.city, property.state, property.price, property.posted);
+      });
+
+      //console.log(Property.all);
+      Property.displayContent();
+    });
+  }
+
+  refresh(); //call page loads
+  $('#refresh').click(refresh); //repeat refersh every 5 seconds
+  setInterval(refresh, 5000);
 
 });
