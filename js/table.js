@@ -55,8 +55,8 @@ $(function() {
       Property.all = []; //clear the array of property instances.
       $('table').find('tbody').empty(); //empty table body
 
-      $.each(response, function(i, property){
-        var property = new Property(property.street, property.city, property.state, property.price, property.posted);
+      $.each(response, function(i, property) {
+        var newProperty = new Property(property.street, property.city, property.state, property.price, property.posted);
       });
 
       //console.log(Property.all);
@@ -64,8 +64,8 @@ $(function() {
     });
   }
 
-  refresh(); //call page loads
-  $('#refresh').click(refresh); //repeat refersh every 5 seconds
-  setInterval(refresh, 5000);
+  refresh(); //call refresh on page load
+  $('#refresh').click(refresh); //refresh on click
+  setInterval(refresh, 5000); //repeat refresh every 5 seconds
 
 });
