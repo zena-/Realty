@@ -91,12 +91,26 @@ span.error {
   color: red;
 }
 
+input.verify-box {
+  display: inline-block;
+  width: 78%;
+  margin-right: 2%;
+}
+
+img.verify-img {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  vertical-align: bottom;
+  margin-bottom: 3px;
+}
+
 iframe {
   border: 0;
   padding: 0;
   margin: 0;
   overflow: hidden;
-  height: 403px;
+  height: 406px;
 }
 
 .milk-text {
