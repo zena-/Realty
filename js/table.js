@@ -47,6 +47,7 @@ $(function() {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   // get properties via api and create property instances
   function refresh (){
     $.get('http://exceptional-realty-property-ad.herokuapp.com/properties.json', function(response){
@@ -78,6 +79,14 @@ $(function() {
       //console.log(response);
 >>>>>>> 9c882fe1064ea2a82103871038681c55b340de83
 
+=======
+  // get properties via API and create property instances
+
+  function refresh() {
+    $.get('http://exceptional-realty-property-ad.herokuapp.com/properties.json', function(response){
+      //console.log(response);
+
+>>>>>>> 9c882fe1064ea2a82103871038681c55b340de83
       Property.all = []; //clear the array of property instances.
       $('table').find('tbody').empty(); //empty table body
 
