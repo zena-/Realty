@@ -46,6 +46,7 @@ $(function() {
     $('table').stupidtable(); // jQuery table sort plugin
   };
 
+<<<<<<< HEAD
   // get properties via api and create property instances
   function refresh (){
     $.get('http://exceptional-realty-property-ad.herokuapp.com/properties.json', function(response){
@@ -69,8 +70,28 @@ $(function() {
   // var property2 = new Property("974 Clapton St.", "Queens", "NY", 998000, "2014 Mar 14");
   // var property3 = new Property("14A Belmont Way", "Bronx", "NY", 874000, "2014 Mar 28");
   // var property4 = new Property("455 Crazy lane", "Queens", "NY", 555000, "2013 Apr 1");
+=======
+  // get properties via API and create property instances
 
-  //console.log(Property.all);
-  Property.displayContent();
+  function refresh() {
+    $.get('http://exceptional-realty-property-ad.herokuapp.com/properties.json', function(response){
+      //console.log(response);
+>>>>>>> 9c882fe1064ea2a82103871038681c55b340de83
+
+      Property.all = []; //clear the array of property instances.
+      $('table').find('tbody').empty(); //empty table body
+
+      $.each(response, function(i, property) {
+        var newProperty = new Property(property.street, property.city, property.state, property.price, property.posted);
+      });
+
+      //console.log(Property.all);
+      Property.displayContent();
+    });
+  }
+
+  refresh(); //call refresh on page load
+  $('#refresh').click(refresh); //refresh on click
+  setInterval(refresh, 5000); //repeat refresh every 5 seconds
 
 });
